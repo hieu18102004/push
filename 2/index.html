@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        button{
+            display: inline;
+            padding: 20px;
+            background-color: rgb(255, 0, 0);
+        }
+    </style>
+    <button onclick="dieuhuong(1)"> rock</button>
+    <button onclick="dieuhuong(2)">paper</button>
+    <button onclick="dieuhuong(3)">scissors</button>
+    <script>
+        
+        function dieuhuong(x){
+            var mang=['rock','paper','scissors']
+            var ramdom=Math.round(Math.random()*mang.length);
+            console.log(mang[ramdom])
+            if(mang[ramdom]=="scissors" && x==1){
+                alert("bạn đã thắng scissors")
+            }else if(mang[ramdom]=="paper" && x==1){
+                alert("bạn đã thua paper")
+            }else if(mang[ramdom]=="rock" && x==3){
+                alert("Bạn đã thua Rock!")
+            }else if(mang[ramdom]=="paper" && x==3){
+                alert("Bạn đã thắng Paper")
+            }else if(x==2 && mang[ramdom]=="rock"){
+                alert("Bạn đã thắng Rock!")
+            }else if(x==2 && mang[ramdom]=="scissors"){
+                alert("Bạn đã thua scissors!")
+            }
+        }
+
+    </script>
+</body>
+</html>
